@@ -15,10 +15,9 @@
     "reactstrap": "^9.0.2",
     "web-vitals": "^2.1.4"
   },
-  "engines":{
-    "node":"14.18.1",
-    "npm":"8.3.2"
-
+  "engines": {
+    "node": "14.18.1",
+    "npm": "8.3.2"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -43,5 +42,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "dotenv-webpack": "^7.1.0"
   }
 }
