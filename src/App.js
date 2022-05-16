@@ -2,6 +2,7 @@ import axios from "axios";
 import { useState } from "react";
 import InputForm from "./Components/InputForm";
 import Response from "./Components/Response";
+require("dotenv").config();
 
 function App() {
   const apiKey = process.env.API_KEY;
