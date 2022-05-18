@@ -2,16 +2,15 @@ import axios from "axios";
 import { useState } from "react";
 import InputForm from "./Components/InputForm";
 import Response from "./Components/Response";
-import { Card, CardBody, CardTitle } from "reactstrap";
+import { Card } from "reactstrap";
 
 function App() {
-  const apiKey =
-    process.env.REACT_APP_API_KEY ||
-    "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";
+  const apiKey = process.env.REACT_APP_API_KEY;
   const [responses, setResponses] = useState(
     JSON.parse(localStorage.getItem("queries")) || []
   );
   const [query, setQuery] = useState("");
+  const [engine, setEngineType] = useState("");
   const [loading, setLoading] = useState(false);
   const handleQueryChange = (e) => {
     setQuery(e.target.value);
@@ -50,16 +49,16 @@ function App() {
     );
     setResponses([{ query, response: data.choices[0].text }, ...responses]);
   };
-
+  console.log(engine);
   return (
     <div className="container">
       <div className="row">
         <InputForm
+          setEngineType={setEngineType}
           handleSubmit={handleSubmit}
           handleQueryChange={handleQueryChange}
         />
       </div>
-
       <div className="row">
         <div className="col-9  offset-md-2">
           {responses.length > 0 && <h3> Responses:</h3>}

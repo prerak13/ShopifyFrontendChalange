@@ -5,6 +5,7 @@ function InputForm({ handleSubmit, handleQueryChange }) {
     <form onSubmit={handleSubmit} className="col-9  offset-md-2 ">
       <h3 className="col-7  offset-md-5 "> Fun with AI</h3>
       <hr />
+
       <div className="row">
         <h3> Please The Enter Prompt Below:</h3>
 
